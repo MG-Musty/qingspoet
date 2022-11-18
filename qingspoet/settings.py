@@ -55,7 +55,7 @@ ROOT_URLCONF = 'qingspoet.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r"C:\Users\WALSOFT COMPUTERS\qingspoet\qings\templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

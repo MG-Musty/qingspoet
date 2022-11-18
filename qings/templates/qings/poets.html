@@ -9,11 +9,28 @@
         <div class="container">
             <header>
                 <div class="zoom">
-                    <h1>WELCOME TO POETS</h1>
+                    <h1 style="color: white;">WELCOME TO POETS</h1>
                 </div>
             </header>
         </div>
 
+    <section>
+        <div class="container" style="width: 100%;">
+            <div class="d-flex flex-row bd-highlight mb-3">
+                {% for poet in poets %}
+                <div class="card mx-3" style="width: 18rem;">
+                    <img src="{{ poet.image.url }}" class="card-img-top" alt="{{ poet.image.url }}">
+                    <div class="card-body" style="background-color: rgb(187, 107, 107);">
+                    <h5 class="card-title" style="color: blue"><b>{{ poet.title }}</b></h5>
+                    <hr>
+                    <p class="card-text" style="color: white;">{{ poet.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+   
         <div class="container" style="background-color: rgb(156, 132, 156); width:auto; text-align: center;">
             <h2 style="color: gold;">Food for thoughts</h2>
             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
@@ -52,7 +69,5 @@
             </a>
             </div>
         </div>
-
-        <p>In this page i want to be able to upload (Titles, Descriptions, Images, and videos)</p>
 
 {% endblock %}
