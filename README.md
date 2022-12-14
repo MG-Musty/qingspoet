@@ -1,5 +1,9 @@
 # :heart: Qingspoet :smile:
 
+## Motivation :girl:
+
+This project was a motivation from someone so special to me **QINGS**
+
 > Qingspoet: Is a true definition that gives overview expressions from the heart and soul,
 > which defines us as humans. In the creation of Man, Love, Emotions, Struggles, and Affections
 > was something that makes us different from any other living things in the universe.
