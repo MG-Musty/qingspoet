@@ -1,10 +1,17 @@
 {% extends "qings/layout.html" %}
 {% load static %}
-{% block title %}
-    About
-{% endblock %}
+
+{% block title %}About | {% endblock %}
 
 {% block body %}
+
+        <div class="container" style="width: 100%;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-inline-flex p-2 bd-highlight">
+            <div class="container-fluid">
+                <a class="btn btn-outline-primary btn-floating m-1" href="{% url 'index' %}"><strong>Qings Poet</strong></a>
+            </div>
+            </nav>
+        </div>
 
         <div class="container">
             <header>
@@ -14,16 +21,16 @@
             </header>
         </div>
 
-        <div class="container" style="text-align:center">
-            <div class="column">
+        <div class="container" style="text-align:center; box-shadow: 0 16px 48px #E3E7EB;">
+            <div class="column mb-3">
                 <div class="card">
-                  <img src="{% static 'qings/media/qingpix.jpg' %}" alt="thumbnail" style="width:20%; align-self: center;">
+                  <img src="{% static 'qings/media/qingsabout.jpg' %}" alt="thumbnail" style="width:20%; align-self: center;">
                   <div class="container">
                     <h2>Leeda Mirine (Qings)</h2>
                     <p class="title"><strong>Owner</strong></p>
-                    <p>Phenomenon Poetry, talented creative, lyricalist.</p>
+                    <p>Phenomenon Poetic, talented creative, lyricalist.</p>
                     <p><strong>Qingspoet: </strong>Is a true definition that gives overview expressions from the heart and soul,<br>
-                        which defines us as humans. In the creation of Man, Love, Emotions, and Affections<br>
+                        which defines us as humans. In the creation of Man, Love, Emotions, Struggles, and Affections<br>
                         was something that makes us different from any other living things in the universe.<br> 
                         This App was designed to help mankind to learn and to appreciate what love is.</p>
                         <p>Here at <strong>Qingspoet</strong> you are about to experience the true nature of human expressions<br>
@@ -38,8 +45,8 @@
             </div>
         </div>
 
-        <div class="container" style="background-color: rgb(156, 132, 156); width:auto;">
-            <h2>Food for thoughts</h2>
+        <div class="container" style="background-color: rgb(156, 132, 156); width:auto; color: white;">
+            <h2>Comments</h2>
             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -50,18 +57,18 @@
             </ol>
         
             <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
+                <div class="carousel-inner" role="listbox" style="color: black;">
                     <div class="item active">
-                    <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+                    <h4>"This is the best thing you done and it as impact my life.<br> I am so happy with the result!"<br><span>Michael Roe, New York, USA.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    <h4>"One good thing... WOW!!"<br><span>John Doe, ATL, USA.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+                    <h4>"Could I... BE any more happy with this site? Lol!"<br><span>Chandler Bing, Ontario, Canada.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    <h4>"We appreciate your work... WOW!!"<br><span>Kelly Jones, CA, USA.</span></h4>
                     </div>
                 </div>
         

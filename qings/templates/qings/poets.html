@@ -1,10 +1,17 @@
 {% extends "qings/layout.html" %}
 {% load static %}
-{% block title %}
-    Poets
-{% endblock %}
+{% block title %}Poets | {% endblock %}
 
 {% block body %}
+
+
+        <div class="container" style="width: 100%;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-inline-flex p-2 bd-highlight">
+            <div class="container-fluid">
+                <a class="btn btn-outline-primary btn-floating m-1" href="{% url 'index' %}"><strong>Qings Poet</strong></a>
+            </div>
+            </nav>
+        </div>
 
         <div class="container">
             <header>
@@ -16,9 +23,9 @@
 
     <section>
         <div class="container" style="width: 100%;">
-            <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="row mx-3 mb-3">
                 {% for poet in poets %}
-                <div class="card mx-3" style="width: 18rem;">
+                <div class="card mx-3" style="width: 18rem; box-shadow: 0 16px 48px #E3E7EB;">
                     <img src="{{ poet.image.url }}" class="card-img-top" alt="{{ poet.image.url }}">
                     <div class="card-body" style="background-color: rgb(187, 107, 107);">
                     <h5 class="card-title" style="color: blue"><b>{{ poet.title }}</b></h5>
@@ -32,7 +39,7 @@
     </section>
    
         <div class="container" style="background-color: rgb(156, 132, 156); width:auto; text-align: center;">
-            <h2 style="color: gold;">Food for thoughts</h2>
+            <h2 style="color: white;">Comments</h2>
             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -43,18 +50,18 @@
             </ol>
         
             <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
+                <div class="carousel-inner" role="listbox" style="color: black;">
                     <div class="item active">
-                    <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+                    <h4>"OMG all of your poems are soul touching!"<br><span>Laurita Peros, Chicago, USA.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    <h4>"WOW!! so beautiful"<br><span>Sade Patrick, Naveda, USA.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+                    <h4>"Tell what is life without Love!!"<br><span>Chapman Dwel, Frankfort, Germany</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    <h4>"Your lyrics can make a man go broke! Lol!"<br><span>Mensah Musa, Tema, Ghana</span></h4>
                     </div>
                 </div>
         

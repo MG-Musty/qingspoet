@@ -1,10 +1,16 @@
 {% extends "qings/layout.html" %}
 {% load static %}
-{% block title %}
-    Videos
-{% endblock %}
+{% block title %}Videos | {% endblock %}
 
 {% block body %}
+
+    <div class="container" style="width: 100%;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-inline-flex p-2 bd-highlight">
+        <div class="container-fluid">
+            <a class="btn btn-outline-primary btn-floating m-1" href="{% url 'index' %}"><strong>Qings Poet</strong></a>
+        </div>
+        </nav>
+    </div>
 
     <div class="container">
         <header>
@@ -16,11 +22,11 @@
 
     <section>
         <div class="container" style="width: 100%;">
-            <div class="d-flex flex-row bd-highlight mb-3">
+            <div class="row mx-3 mb-3">
                 {% for video in videos %}
-                <div class="card mx-3" style="width: 18rem;">
+                <div class="card mx-3" style="width: 18rem; box-shadow: 0 16px 48px #E3E7EB;">
                     <video class="img-fluid" controls="controls">
-                        <source src="{{ video.video.url }}" type="video/mp4" />
+                        <source src="{{ video.video.url }}" type="video/mp4" height="300px" />
                     </video>
                     <div class="card-body">
                     <h5 class="text-center mt-2 mb-2"><b>{{ video.title }}</b></h5>
@@ -34,7 +40,7 @@
     </section>
 
     <div class="container" style="background-color: rgb(156, 132, 156); width:auto; text-align: center;">
-        <h2 style="color: gold;">Food for thoughts</h2>
+        <h2 style="color: white;">Comments</h2>
         <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -47,16 +53,16 @@
         <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+                <h4>"Good views from the quality product"<br><span>Akim Ayo, Ibadan, Nigeria.</span></h4>
                 </div>
                 <div class="item">
-                <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                <h4>"Your videos are great... WOW!!"<br><span>Larai Man, San Francisco, USA.</span></h4>
                 </div>
                 <div class="item">
-                <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+                <h4>"Watching the session looks like"<br><span>Sam Joseph, LA, USA.</span></h4>
                 </div>
                 <div class="item">
-                <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                <h4>"The generational site"<br><span> Cindy Muaren, Sanjose, USA.</span></h4>
                 </div>
             </div>
     

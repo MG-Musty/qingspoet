@@ -1,24 +1,30 @@
 {% extends "qings/layout.html" %}
 {% load static %}
-{% block title %}
-    Quotes
-{% endblock %}
+{% block title %}Quotes | {% endblock %}
 
 {% block body %}
+
+        <div class="container" style="width: 100%;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-inline-flex p-2 bd-highlight">
+            <div class="container-fluid">
+                <a class="btn btn-outline-primary btn-floating m-1" href="{% url 'index' %}"><strong>Qings Poet</strong></a>
+            </div>
+            </nav>
+        </div>
 
         <div class="container">
             <header>
                 <div class="zoom">
-                    <h1 style="color: white;">WELCOME TO QUOTES</h1>
+                    <h1 style="color: white;">WELCOME TO MOTIVATIONAL QUOTES</h1>
                 </div>
             </header>
         </div>
 
         <section>
             <div class="container" style="width: 100%;">
-                <div class="d-flex flex-row bd-highlight mb-3">
+                <div class="row mx-3 mb-3">
                     {% for quote in quotes %}
-                    <div class="card mx-3" style="width: 18rem;">
+                    <div class="card mx-3" style="width: 18rem; box-shadow: 0 16px 48px #E3E7EB;">
                         <img src="{{ quote.image.url }}" class="card-img-top" alt="{{ quote.image.url }}">
                         <div class="card-body" style="background-color: rgb(220, 99, 99);">
                         <h5 class="card-title" style="color: blue;"><b>{{ quote.title }}</b></h5>
@@ -31,8 +37,8 @@
             </div>
         </section>
 
-        <div class="container" style="background-color: rgb(156, 132, 156); width:auto; text-align: center;">
-            <h2>Food for thoughts</h2>
+        <div class="container" style="background-color: rgb(156, 132, 156); width:auto; text-align: center; color: #E3E7EB;">
+            <h2>Comments</h2>
             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -43,18 +49,18 @@
             </ol>
         
             <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
+                <div class="carousel-inner" role="listbox" style="color: black;">
                     <div class="item active">
-                    <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+                    <h4>"This quotes are the best. I am so happy to be here!"<br><span>Joel Bones, Brokelyn, USA.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    <h4>"What!!! this as change my thinking"<br><span>Everest John, Island, Norway.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+                    <h4>"Life as been easy with your quotes"<br><span>Emma George, Vegas, USA.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    <h4>"Straight and clear lines"<br><span>Doe Sadiq, London, UK.</span></h4>
                     </div>
                 </div>
         

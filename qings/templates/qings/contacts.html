@@ -1,10 +1,16 @@
 {% extends "qings/layout.html" %}
 {% load static %}
-{% block title %}
-    Contacts
-{% endblock %}
+{% block title %}Contacts | {% endblock %}
 
 {% block body %}
+
+        <div class="container" style="width: 100%;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light d-inline-flex p-2 bd-highlight">
+            <div class="container-fluid">
+                <a class="btn btn-outline-primary btn-floating m-1" href="{% url 'index' %}"><strong>Qings Poet</strong></a>
+            </div>
+            </nav>
+        </div>
 
         <div class="container">
             <header>
@@ -14,62 +20,27 @@
             </header>
         </div>
 
-        <!--Form for Email subscibtion-->
-        <div class="jumbotron" style="background-color: gray; color: #ffffff; width: auto;">
-            <p>We specialize in blablabla</p>
-            <form class="form-inline">
-            {% csrf_token %}
-              <div class="input-group">
-                <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-danger">Subscribe</button>
-                </div>
-              </div>
-            </form>
-          </div>
-
           <!--Contact form with a textarea for contacting the Author-->
-        <div class="container py-4" style="background-color: gray; color: #ffffff;">
+        <div class="container py-4" style="background-color: gray; color: #ffffff; box-shadow: 0 16px 48px #E3E7EB;">
 
                 <!-- Bootstrap 5 starter form -->
-            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <form id="contactForm" method="post">
             {% csrf_token %}
             
-                <!-- Name input -->
-                <div class="mb-3">
-                    <label class="form-label" for="name">Name</label>
-                    <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-                    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-                </div>
-            
-                <!-- Email address input -->
-                <div class="mb-3">
-                    <label class="form-label" for="emailAddress">Email Address</label>
-                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                <div class="form-group">
+                    <label for="fname">Your Name</label>
+                    <input name="name" type="text" id="fname" class="form-control" placeholder="Your Name">
+
+                    <label for="exampleInputEmail">Email Address</label>
+                    <input name="email" class="form-control" id="exampleInputEmail" placeholder="Email Address" aria-describedby="emailHelp" data-sb-validations="required, email" />
                     <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                </div>
-            
-                <!-- Message input -->
-                <div class="mb-3">
+
                     <label class="form-label" for="message">Message</label>
-                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                    <textarea name="message" class="form-control" id="message" type="text" placeholder="Message" style="height: 20rem;" data-sb-validations="required"></textarea>
                     <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
-                </div>
-            
-                <!-- Form submissions success message -->
-                <div class="d-none" id="submitSuccessMessage">
-                    <div class="text-center mb-3">Form submission successful!</div>
-                </div>
-            
-                <!-- Form submissions error message -->
-                <div class="d-none" id="submitErrorMessage">
-                    <div class="text-center text-danger mb-3">Error sending message!</div>
-                </div>
-            
-                <!-- Form submit button -->
-                <div class="d-grid">
-                    <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+
+                    <input type="submit" class="btn btn-primary btn-lg mt-1 ml-4" value="Submit">
+
                 </div>
             
             </form>
@@ -80,8 +51,8 @@
           <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
 
-        <div class="container" style="background-color: rgb(156, 132, 156); width:auto; text-align: center;">
-            <h2>Food for thoughts</h2>
+        <div class="container" style="background-color: rgb(156, 132, 156); width:auto; text-align: center; color: white;">
+            <h2>Comments</h2>
             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -92,18 +63,18 @@
             </ol>
         
             <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
+                <div class="carousel-inner" role="listbox" style="color: black;">
                     <div class="item active">
-                    <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+                    <h4>"The respond to my message was ontime.<br> I am so happy with the result!"<br><span>Mariam Grey, Texas, USA.</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    <h4>"I was so excited to get a message back"<br><span>Franco Bas, Paris, Italy</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+                    <h4>"Quick reply!!!"<br><span>Lisa Mari, Johanasbour, South Africa</span></h4>
                     </div>
                     <div class="item">
-                    <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+                    <h4>"No waiting for long for a respond"<br><span>Aliyu Galadima, Niger State, Nigeria</span></h4>
                     </div>
                 </div>
         
