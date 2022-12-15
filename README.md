@@ -18,6 +18,7 @@ This project was a motivation from someone so special to me **QINGS**
 > This is the reason why Qingspoet came to an existance, to support and ellivate mankind
 > to be hopeful in Love and growth. Stay with us as we give out new updates for both poets
 > and motivational quotes to spicy up all of the emotional and life struggles.
+> Also a section for a regular **Blog Post**
 
 # Sampling of the front-end
 
