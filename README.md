@@ -1,7 +1,11 @@
 # :heart: Qingspoet :smile:
 
+## Motivation :girl:
+
+This project was a motivation from someone so special to me **QINGS**
+
 > Qingspoet: Is a true definition that gives overview expressions from the heart and soul,
-> which defines us as humans. In the creation of Man, Love, Emotions, and Affections
+> which defines us as humans. In the creation of Man, Love, Emotions, Struggles, and Affections
 > was something that makes us different from any other living things in the universe.
 > This App was designed to help mankind to learn and to appreciate what love is.
 
@@ -14,8 +18,12 @@
 > This is the reason why Qingspoet came to an existance, to support and ellivate mankind
 > to be hopeful in Love and growth. Stay with us as we give out new updates for both poets
 > and motivational quotes to spicy up all of the emotional and life struggles.
+> Also a section for a regular **Blog Post**
 
-## Project still on production
+# Sampling of the front-end
+
+![screencapture-127-0-0-1-8000-poets-2022-12-14-12_11_46](https://user-images.githubusercontent.com/106968663/207686283-a5bbf234-d33b-4d17-ae58-89decced3665.png)
+
 
 # :pen: Author :books:
 
