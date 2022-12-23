@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-rd&lsj1sirye(*8b-yg6za#nc!*wn^*744b%4@1y2zk@lvi)-&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
+DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
 
 ALLOWED_HOSTS = ['*']
 
@@ -89,7 +89,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-} 
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
