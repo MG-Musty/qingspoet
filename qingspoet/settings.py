@@ -31,6 +31,8 @@ SECRET_KEY = 'django-insecure-rd&lsj1sirye(*8b-yg6za#nc!*wn^*744b%4@1y2zk@lvi)-&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
+
 ALLOWED_HOSTS = ['*']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -81,13 +83,19 @@ WSGI_APPLICATION = 'qingspoet.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}
+}"""
 
+DATABASES = {
+    'default': dj_database_url.config(
+        conn_max_age=600,
+        conn_health_checks=True,
+    ),
+}
 
 
 # Password validation
