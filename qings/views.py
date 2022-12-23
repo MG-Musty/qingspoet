@@ -4,6 +4,10 @@ from .models import Poet, Quote, Video, Contact, Blog
 from django.http import Http404, HttpResponse
 
 from django.views import generic
+#contact us page
+from django.core.mail import send_mail
+from django.http import HttpResponse, HttpResponseRedirect
+from qings.forms import ContactUsForm
 
 from . import views
 # Create your views here.
@@ -45,9 +49,9 @@ def contacts(request):
         contact.email=email
         contact.message=message
         contact.save()
-        return HttpResponse("<h3 text-center>THANKS FOR CONTACTING US!</H3>")
+        return HttpResponse("<h3>THANKS FOR CONTACTING US!</H3>")
     return render(request, "qings/contacts.html")
-
+ 
 
 class BlogList(generic.ListView):
     queryset = Blog.objects.filter(status=1).order_by('-created_on')
@@ -56,3 +60,32 @@ class BlogList(generic.ListView):
 class Detail(generic.DetailView):
     model = Blog
     template_name = 'qings/details.html'
+
+
+
+""""def contacts(request):
+    if request.method == 'POST':
+        # create an instance of our form, and fill it with the POST data
+        form = ContactUsForm(request.POST)
+
+        if form.is_valid():
+            send_mail(
+                subject=f'Message from {form.cleaned_data["name"] or "anonymous"} via Qingspoet Contact Us form',
+                message=form.cleaned_data['message'],
+                from_email=form.cleaned_data['email'],
+                recipient_list=['admin@qingspoet.xyz'],
+            )
+            return HttpResponseRedirect('/email_sent/')
+        # if the form is not valid, we let execution continue to the return
+        # statement below, and display the form again (with errors).
+
+    else:
+        # this must be a GET request, so create an empty form
+        form = ContactUsForm()
+
+    return render(request,
+                  'qings/contacts.html',
+                  {'form': form})
+
+def email_sent(request):
+    return render(request, 'qings/email_sent.html') """
