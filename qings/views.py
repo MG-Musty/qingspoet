@@ -49,8 +49,8 @@ def contacts(request):
         contact.email=email
         contact.message=message
         contact.save()
-        return HttpResponse("<h3>THANKS FOR CONTACTING US!</H3>")
-    return render(request, "qings/contacts.html")
+        #return HttpResponse("<h3>THANKS FOR CONTACTING US!</H3>")
+        return render(request, "qings/contacts.html")
  
 
 class BlogList(generic.ListView):
