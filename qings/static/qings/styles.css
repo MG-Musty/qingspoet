@@ -87,12 +87,25 @@ footer {
   }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
+  @media screen and (max-width: 450px) { 
     .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
+    .sidebar a {font-size: 10px; display: flex; flex-direction: row; color: aqua;}
+    .openbtn {font-size: small;}
   }
 
-.card-body {
-  padding: 10px;
+.card-body, 
+.container {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 450px) {
+  .h1 {
+    font-size: 15px;
+    font-display: 15px;
+    display: flex;
+  }
 }
 

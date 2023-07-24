@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.template import loader
 from .models import Poet, Quote, Video, Contact, Blog
 from django.http import Http404, HttpResponse
+from django.shortcuts import redirect
+from django.urls import reverse
 
 from django.views import generic
 #contact us page
@@ -49,7 +51,8 @@ def contacts(request):
         contact.email=email
         contact.message=message
         contact.save()
-        #return HttpResponse("<h3>THANKS FOR CONTACTING US!</H3>")
+        return HttpResponseRedirect(reverse("index"))
+    else:
         return render(request, "qings/contacts.html")
  
 
