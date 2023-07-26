@@ -26,7 +26,7 @@ urlpatterns = staticfiles_urlpatterns()
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("qings/", include("qings.urls")),
-    path("poets/", include("qings.urls")),
+    path("", include("qings.urls")),
 ]
 
 

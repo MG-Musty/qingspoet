@@ -4,12 +4,12 @@ from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from . import views
-
+from django.contrib.auth import views as auth_views
 
 urlpatterns = staticfiles_urlpatterns()
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path('', views.Index.as_view(), name='index'),
     path("poets", views.poets, name="poets"),
     path('about', views.about, name="about"),
     path("quotes", views.quotes, name="quotes"),

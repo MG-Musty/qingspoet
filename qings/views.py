@@ -10,12 +10,15 @@ from django.views import generic
 from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseRedirect
 from qings.forms import ContactUsForm
+from django.views.generic.base import TemplateView
 
 from . import views
 # Create your views here.
 
-def index(request):
-    return render(request, "qings/index.html")
+# def index(request):
+#     return render(request, "qings/index.html")
+class Index(TemplateView):
+	template_name = 'qings/index.html'
 
 def poets(request):
     poets = Poet.objects.all()

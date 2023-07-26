@@ -11,6 +11,14 @@ h1 {
     background-image: linear-gradient(rgb(136, 119, 208) 50%, rgb(76, 48, 48) 50%);
 }
 
+.card {
+  margin: auto;
+}
+
+.carousel-inner {
+  margin: auto;
+}
+
 hr {
     background-color: #818181;
 }
@@ -101,11 +109,10 @@ footer {
   flex-direction: column;
 }
 
-@media screen and (max-width: 450px) {
-  .h1 {
-    font-size: 15px;
-    font-display: 15px;
-    display: flex;
+@media (max-width: 450px) {
+  h1{
+    font-size: small;
+    font-display: 10px;
   }
 }
 
